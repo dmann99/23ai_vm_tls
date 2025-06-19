@@ -1,9 +1,0 @@
-# Create new wallet (note will overwrite existing!)
-orapki wallet create -wallet . -pwd WalletPasswd123 -auto_login_local
-
-# Add previously generated server cert as a trusted cert
-orapki wallet add -wallet . -pwd WalletPasswd123 -trusted_cert -cert vbox-certificate.crt
-
-# Display wallet details
-# Note you should just see the cert in the trusted area
-orapki wallet display -wallet . -complete
