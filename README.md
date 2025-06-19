@@ -13,10 +13,11 @@ Info for a successful config of one way TLS on the Oracle supplied 23ai Develope
 
 ## Client Config Steps
 1. Create directory and client wallet using cert generated in (1) above
-2. Configure client sqlnet.ora
-3. Configure client tnsnames.ora, note protocol=TCPS and wallet specified in sqlnet.ora or explicitly in tnsname
-4. Make a connection
-5. Verify using verify.sql - should return "tcps" as network_protocol
+2. Create directory for config files, set TNS_ADMIN environment variable to this directory. 
+3. Configure client sqlnet.ora
+4. Configure client tnsnames.ora, note protocol=TCPS and wallet specified in sqlnet.ora or explicitly in tnsname
+5. Make a connection
+6. Verify using verify.sql - should return "tcps" as network_protocol
 
 ## To Do
 1. Verify ciphers negotiated by turning on tracing
