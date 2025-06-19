@@ -1,0 +1,33 @@
+LISTENER =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCPS)(HOST = localhost)(PORT = 1522))
+      (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC1521))
+    )
+  )
+
+
+SID_LIST_LISTENER =
+ (SID_LIST =
+   (SID_DESC =
+     (GLOBAL_DBNAME = free)
+     (SID_NAME = free)
+     (ORACLE_HOME = /opt/oracle/product/23ai/dbhomeFree )
+   )
+ )
+
+SSL_CLIENT_AUTHENTICATION=FALSE
+
+WALLET_LOCATION=
+    (SOURCE=
+        (METHOD=file)
+        (METHOD_DATA=
+            (DIRECTORY=/tmp/server_wallet/2E711CD7D1133106E0630100007F5070/tls)
+        )
+    )
+
+TRACE_LEVEL_LISTENER=SUPPORT
+LOG_DIRECTORY_LISTENER=/tmp/listener_log
+TRACE_DIRECTORY_LISTENER=/tmp/listener_trace
+DIAG_ADR_ENABLED_LISTENER=OFF
