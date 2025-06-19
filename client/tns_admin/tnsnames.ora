@@ -1,0 +1,27 @@
+FREEPDB1 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = FREEPDB1)
+    )
+  )
+
+FREEPDB1S =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCPS)(HOST = localhost)(PORT = 1522))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = FREEPDB1)
+    )
+  )
+
+FREEPDB1T =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCPS)(HOST = localhost)(PORT = 1522))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = FREEPDB1)
+    )
+    (SECURITY=(MY_WALLET_DIRECTORY=/tmp/client_wallet))
+  )
