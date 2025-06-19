@@ -1,0 +1,16 @@
+# Existing vbox-certificate.crt supplied for posterity, here's how to create a fresh wallet with a self signed server cert: 
+
+# Note wallet will be created in current diretory and overwrite any wallet already existing! 
+
+# Create a new wallet
+orapki wallet create -wallet . -pwd WalletPasswd123 -auto_login_local
+
+# Create self signed cert inside of wallet using orapki features
+orapki wallet add -wallet . -pwd WalletPasswd123   -dn "CN=`hostname`" -keysize 2048 -self_signed -validity 3650
+
+# Export the created cert so we can use for client
+orapki wallet export -wallet . -pwd WalletPasswd123    -dn "CN=`hostname`" -cert /tmp/`hostname`-certificate.crt
+
+# Display cert details
+# Note that you should see the self signed cert both in the "User" and "Trusted" areas
+orapki display wallet -wallet . -complete
